@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickServe - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        <i class="fa-solid fa-bolt"></i>
+        QuickServe
+    </div>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="#bookings">
+            <i class="fa-solid fa-calendar-check"></i>
+            My Bookings
+        </a>
+
+        <a href="#services">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            Services
+        </a>
+
+    </div>
+
+    <div class="user-area">
+
+        <div class="user-avatar">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <!-- REGISTERED NAME WILL COME HERE -->
+        <span id="dashboardUserName">
+            Welcome, User
+        </span>
+
+        <button onclick="logoutUser()" class="logout-btn">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= WELCOME SECTION ================= -->
+
+<section class="dashboard-welcome">
+
+    <div>
+
+        <!-- REGISTERED NAME WILL COME HERE -->
+        <h1 id="dashboardWelcome">
+            Welcome Back!!👋
+        </h1>
+
+        <p>
+            Manage your services and bookings easily with QuickServe.
+        </p>
+
+    </div>
+
+    <button onclick="window.location.href='index.html'"
+            class="dashboard-book-btn">
+
+        <i class="fa-solid fa-plus"></i>
+        Book New Service
+
+    </button>
+
+</section>
+
+
+<!-- ================= STATS ================= -->
+
+<section class="dashboard-stats">
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-calendar"></i>
+        </div>
+
+        <div>
+            <h3>3</h3>
+            <p>Total Bookings</p>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div>
+            <h3>2</h3>
+            <p>Completed</p>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-clock"></i>
+        </div>
+
+        <div>
+            <h3>1</h3>
+            <p>Upcoming</p>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <div class="stat-icon">
+            <i class="fa-solid fa-star"></i>
+        </div>
+
+        <div>
+            <h3>4.8</h3>
+            <p>Average Rating</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BOOKINGS ================= -->
+
+<section class="dashboard-section" id="bookings">
+
+    <div class="section-title">
+
+        <div>
+            <h2>My Bookings</h2>
+            <p>View your recent service bookings</p>
+        </div>
+
+        <button class="view-all-btn">
+            View All
+        </button>
+
+    </div>
+
+
+    <div class="booking-container">
+
+        <div class="booking-card">
+
+            <div class="booking-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </div>
+
+            <div class="booking-info">
+
+                <h3>Electrician Service</h3>
+
+                <p>
+                    <i class="fa-solid fa-calendar"></i>
+                    10 October 2026
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Chennai
+                </p>
+
+            </div>
+
+            <span class="booking-status completed">
+                Completed
+            </span>
+
+        </div>
+
+
+        <div class="booking-card">
+
+            <div class="booking-icon">
+                <i class="fa-solid fa-faucet"></i>
+            </div>
+
+            <div class="booking-info">
+
+                <h3>Plumbing Service</h3>
+
+                <p>
+                    <i class="fa-solid fa-calendar"></i>
+                    12 October 2026
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Chennai
+                </p>
+
+            </div>
+
+            <span class="booking-status upcoming">
+                Upcoming
+            </span>
+
+        </div>
+
+
+        <div class="booking-card">
+
+            <div class="booking-icon">
+                <i class="fa-solid fa-broom"></i>
+            </div>
+
+            <div class="booking-info">
+
+                <h3>Home Cleaning</h3>
+
+                <p>
+                    <i class="fa-solid fa-calendar"></i>
+                    5 October 2026
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Chennai
+                </p>
+
+            </div>
+
+            <span class="booking-status completed">
+                Completed
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="dashboard-section" id="services">
+
+    <div class="section-title">
+
+        <div>
+            <h2>Quick Services</h2>
+            <p>Choose a service you need</p>
+        </div>
+
+    </div>
+
+
+    <div class="quick-services">
+
+        <div class="quick-service-card"
+             onclick="window.location.href='index.html#services'">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Electrician</h3>
+
+            <p>Electrical repair</p>
+
+        </div>
+
+
+        <div class="quick-service-card"
+             onclick="window.location.href='index.html#services'">
+
+            <i class="fa-solid fa-faucet"></i>
+
+            <h3>Plumber</h3>
+
+            <p>Plumbing services</p>
+
+        </div>
+
+
+        <div class="quick-service-card"
+             onclick="window.location.href='index.html#services'">
+
+            <i class="fa-solid fa-broom"></i>
+
+            <h3>Cleaning</h3>
+
+            <p>Home cleaning</p>
+
+        </div>
+
+
+        <div class="quick-service-card"
+             onclick="window.location.href='index.html#services'">
+
+            <i class="fa-solid fa-computer"></i>
+
+            <h3>Computer Repair</h3>
+
+            <p>Computer services</p>
+
+        </div>
+
+
+        <div class="quick-service-card"
+             onclick="window.location.href='index.html#services'">
+
+            <i class="fa-solid fa-mobile-screen"></i>
+
+            <h3>Mobile Repair</h3>
+
+            <p>Mobile services</p>
+
+        </div>
+
+
+        <div class="quick-service-card"
+             onclick="window.location.href='index.html#services'">
+
+            <i class="fa-solid fa-snowflake"></i>
+
+            <h3>AC Service</h3>
+
+            <p>AC repair & service</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROFILE ================= -->
+
+<section class="dashboard-section">
+
+    <div class="section-title">
+
+        <div>
+            <h2>My Profile</h2>
+            <p>Your QuickServe account details</p>
+        </div>
+
+    </div>
+
+
+    <div class="profile-card">
+
+        <div class="profile-avatar">
+            <i class="fa-solid fa-user"></i>
+        </div>
+
+        <div class="profile-info">
+
+            <h3 id="profileName">
+                QuickServe User
+            </h3>
+
+            <p id="profileEmail">
+                user@example.com
+            </p>
+
+            <p id="profilePhone">
+                +91 98765 43210
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    // Get registered user details
+    const savedName =
+        localStorage.getItem("quickServeName");
+
+    const savedEmail =
+        localStorage.getItem("quickServeEmail");
+
+    const savedPhone =
+        localStorage.getItem("quickServePhone");
+
+
+    // Show registered name
+    if (savedName) {
+
+        document.getElementById("dashboardWelcome")
+            .textContent =
+            "Welcome Back, " + savedName + " 👋";
+
+        document.getElementById("dashboardUserName")
+            .textContent =
+            "Welcome, " + savedName;
+
+        document.getElementById("profileName")
+            .textContent =
+            savedName;
+
+    }
+
+
+    // Show registered email
+    if (savedEmail) {
+
+        document.getElementById("profileEmail")
+            .textContent =
+            savedEmail;
+
+    }
+
+
+    // Show registered phone
+    if (savedPhone) {
+
+        document.getElementById("profilePhone")
+            .textContent =
+            savedPhone;
+
+    }
+
+
+    // Logout
+    function logoutUser() {
+
+        const confirmLogout =
+            confirm("Are you sure you want to logout?");
+
+        if (confirmLogout) {
+
+            localStorage.removeItem("quickServeName");
+            localStorage.removeItem("quickServeEmail");
+            localStorage.removeItem("quickServePhone");
+
+            window.location.href =
+                "index.html";
+
+        }
+        document.getElementById("dashboardWelcome").textContent =
+    savedName;
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register - QuickServe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body class="auth-body">
+
+
+    <!-- ================= REGISTER PAGE ================= -->
+
+    <div class="auth-container">
+
+
+        <!-- Left Side -->
+
+        <div class="auth-left">
+
+            <div class="auth-brand">
+
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+
+                Quick<span>Serve</span>
+
+            </div>
+
+
+            <h1>
+                Join QuickServe
+            </h1>
+
+
+            <p>
+                Create an account and book
+                trusted services easily.
+            </p>
+
+
+            <div class="auth-icon">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+            </div>
+
+        </div>
+
+
+        <!-- Right Side -->
+
+        <div class="auth-form-container">
+
+            <div class="auth-form">
+
+
+                <a href="index.html"
+                   class="back-home">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back to Home
+
+                </a>
+
+
+                <h2>
+                    Create Account
+                </h2>
+
+
+                <p class="auth-subtitle">
+
+                    Register your QuickServe account
+
+                </p>
+
+
+                <form id="registerForm">
+
+
+                    <!-- Full Name -->
+
+                    <div class="auth-input">
+
+                        <label>
+                            Full Name
+                        </label>
+
+                        <div class="input-box">
+
+                            <i
+                                class="fa-solid fa-user">
+                            </i>
+
+                            <input
+                                type="text"
+                                id="registerName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Email -->
+
+                    <div class="auth-input">
+
+                        <label>
+                            Email Address
+                        </label>
+
+                        <div class="input-box">
+
+                            <i
+                                class="fa-solid fa-envelope">
+                            </i>
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Phone -->
+
+                    <div class="auth-input">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <div class="input-box">
+
+                            <i
+                                class="fa-solid fa-phone">
+                            </i>
+
+                            <input
+                                type="tel"
+                                id="registerPhone"
+                                placeholder="Enter phone number"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="auth-input">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i
+                                class="fa-solid fa-lock">
+                            </i>
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                placeholder="Create password"
+                                required>
+
+                            <i
+                                class="fa-solid fa-eye password-eye"
+                                onclick="togglePassword(
+                                'registerPassword',
+                                this)">
+                            </i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="auth-input">
+
+                        <label>
+                            Confirm Password
+                        </label>
+
+                        <div class="input-box">
+
+                            <i
+                                class="fa-solid fa-lock">
+                            </i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm password"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Terms -->
+
+                    <div class="terms">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required>
+
+                            I agree to the
+                            <a href="#">
+                                Terms & Conditions
+                            </a>
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Register -->
+
+                    <button
+                        type="submit"
+                        class="auth-btn">
+
+                        Create Account
+
+                    </button>
+
+
+                </form>
+
+
+                <div class="auth-divider">
+
+                    <span>OR</span>
+
+                </div>
+
+
+                <p class="register-text">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Register JavaScript -->
+
+    
+
+<script>
+
+    // Get registered user name
+
+    const savedName =
+        localStorage.getItem("quickServeName");
+
+
+    // Display user name
+
+    if (savedName) {
+
+        document.getElementById(
+            "dashboardUserName"
+        ).textContent =
+            "Welcome, " + savedName;
+
+    }
+
+
+    // Logout
+
+    function logoutUser() {
+
+        const confirmLogout =
+            confirm(
+                "Are you sure you want to logout?"
+            );
+
+
+        if (confirmLogout) {
+
+            alert(
+                "You have been logged out."
+            );
+
+            window.location.href =
+                "index.html";
+
+        }
+
+    }
+
+</script>

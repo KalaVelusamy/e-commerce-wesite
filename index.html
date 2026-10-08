@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuickServe - Local Service Booking</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Quick<span>Serve</span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#booking">Book Service</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-auth">
+
+    <a href="login.html" class="login-btn">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        Login
+    </a>
+
+    <a href="register.html" class="register-btn">
+        <i class="fa-solid fa-user-plus"></i>
+        Register
+    </a>
+
+</div>
+
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                YOUR TRUSTED LOCAL SERVICE PARTNER
+            </p>
+
+            <h1>
+                Reliable Services<br>
+                <span>At Your Doorstep</span>
+            </h1>
+
+            <p class="hero-text">
+                Find trusted professionals for home and technical services.
+                Book your service quickly and easily with QuickServe.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#services" class="btn primary-btn">
+                    Explore Services
+                </a>
+
+                <a href="#booking" class="btn secondary-btn">
+                    Book Now
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="hero-card">
+                <i class="fa-solid fa-house-circle-check"></i>
+
+                <h3>Professional Service</h3>
+
+                <p>
+                    Skilled professionals at your doorstep.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features">
+
+        <div class="feature">
+            <i class="fa-solid fa-user-check"></i>
+
+            <div>
+                <h3>Verified Professionals</h3>
+                <p>Trusted service providers</p>
+            </div>
+        </div>
+
+
+        <div class="feature">
+            <i class="fa-solid fa-clock"></i>
+
+            <div>
+                <h3>Quick Booking</h3>
+                <p>Book your service in minutes</p>
+            </div>
+        </div>
+
+
+        <div class="feature">
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <div>
+                <h3>Safe & Reliable</h3>
+                <p>Quality service guaranteed</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services-section" id="services">
+
+        <div class="section-title">
+
+            <p>OUR SERVICES</p>
+
+            <h2>Services We Provide</h2>
+
+            <span>
+                Choose the service you need and book a professional.
+            </span>
+
+        </div>
+
+
+        <div class="service-container">
+
+
+            <!-- Electrician -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <h3>Electrician</h3>
+
+                <p>
+                    Electrical installation, repair and maintenance services.
+                </p>
+
+                <button
+                    class="service-btn"
+                    onclick="selectService('Electrician')">
+                    Book Service
+                </button>
+
+            </div>
+
+
+            <!-- Plumber -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-faucet-drip"></i>
+                </div>
+
+                <h3>Plumbing</h3>
+
+                <p>
+                    Professional plumbing repair and maintenance services.
+                </p>
+
+                <button
+                    class="service-btn"
+                    onclick="selectService('Plumbing')">
+                    Book Service
+                </button>
+
+            </div>
+
+
+            <!-- Cleaning -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-broom"></i>
+                </div>
+
+                <h3>Cleaning</h3>
+
+                <p>
+                    Home and office cleaning services by professionals.
+                </p>
+
+                <button
+                    class="service-btn"
+                    onclick="selectService('Cleaning')">
+                    Book Service
+                </button>
+
+            </div>
+
+
+            <!-- Computer -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-laptop"></i>
+                </div>
+
+                <h3>Computer Repair</h3>
+
+                <p>
+                    Laptop and computer troubleshooting and repair services.
+                </p>
+
+                <button
+                    class="service-btn"
+                    onclick="selectService('Computer Repair')">
+                    Book Service
+                </button>
+
+            </div>
+
+
+            <!-- Mobile -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+
+                <h3>Mobile Repair</h3>
+
+                <p>
+                    Smartphone repair and technical support services.
+                </p>
+
+                <button
+                    class="service-btn"
+                    onclick="selectService('Mobile Repair')">
+                    Book Service
+                </button>
+
+            </div>
+
+
+            <!-- AC -->
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    <i class="fa-solid fa-snowflake"></i>
+                </div>
+
+                <h3>AC Service</h3>
+
+                <p>
+                    AC installation, cleaning and maintenance services.
+                </p>
+
+                <button
+                    class="service-btn"
+                    onclick="selectService('AC Service')">
+                    Book Service
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+        <div class="about-image">
+
+            <div class="about-circle">
+                <i class="fa-solid fa-handshake"></i>
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <p class="section-label">
+                ABOUT QUICKSERVE
+            </p>
+
+            <h2>
+                Making Local Services
+                <span>Simple & Accessible</span>
+            </h2>
+
+            <p>
+                QuickServe is a local service booking platform designed
+                to connect customers with trusted professionals.
+            </p>
+
+            <p>
+                Our goal is to make everyday services easier to find,
+                compare and book from the comfort of your home.
+            </p>
+
+
+            <div class="about-points">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Verified service providers
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Easy online booking
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Transparent service process
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= BOOKING ================= -->
+
+    <section class="booking-section" id="booking">
+
+        <div class="section-title">
+
+            <p>BOOK A SERVICE</p>
+
+            <h2>Schedule Your Service</h2>
+
+            <span>
+                Fill in the details below and our team will contact you.
+            </span>
+
+        </div>
+
+
+        <div class="booking-container">
+
+            <form id="bookingForm">
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter your phone number"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Select Service</label>
+
+                    <select id="service" required>
+
+                        <option value="">
+                            -- Select Service --
+                        </option>
+
+                        <option value="Electrician">
+                            Electrician
+                        </option>
+
+                        <option value="Plumbing">
+                            Plumbing
+                        </option>
+
+                        <option value="Cleaning">
+                            Cleaning
+                        </option>
+
+                        <option value="Computer Repair">
+                            Computer Repair
+                        </option>
+
+                        <option value="Mobile Repair">
+                            Mobile Repair
+                        </option>
+
+                        <option value="AC Service">
+                            AC Service
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <label>Date</label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="input-group">
+
+                        <label>Time</label>
+
+                        <input
+                            type="time"
+                            id="time"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Address</label>
+
+                    <textarea
+                        id="address"
+                        rows="4"
+                        placeholder="Enter your address"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn primary-btn booking-btn">
+
+                    Confirm Booking
+
+                </button>
+
+            </form>
+
+
+            <!-- Booking Information -->
+
+            <div class="booking-info">
+
+                <div class="info-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <h3>Easy Booking Process</h3>
+
+                <p>
+                    Book your required service in just a few simple steps.
+                </p>
+
+
+                <div class="process">
+
+                    <div>
+                        <span>1</span>
+                        <p>Select a service</p>
+                    </div>
+
+                    <div>
+                        <span>2</span>
+                        <p>Enter your details</p>
+                    </div>
+
+                    <div>
+                        <span>3</span>
+                        <p>Choose date & time</p>
+                    </div>
+
+                    <div>
+                        <span>4</span>
+                        <p>Confirm booking</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-title">
+
+            <p>CONTACT US</p>
+
+            <h2>Need Help?</h2>
+
+            <span>
+                We are here to help you.
+            </span>
+
+        </div>
+
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-phone"></i>
+
+                <h3>Call Us</h3>
+
+                <p>+91 98765 43210</p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <h3>Email</h3>
+
+                <p>support@quickserve.com</p>
+
+            </div>
+
+
+            <div class="contact-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <h3>Location</h3>
+
+                <p>Chennai, Tamil Nadu</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="logo">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+                Quick<span>Serve</span>
+            </div>
+
+            <p>
+                Making local services simple, reliable and accessible.
+            </p>
+
+        </div>
+
+
+        <div class="social-icons">
+
+            <a href="#">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 QuickServe. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- Booking Popup -->
+
+    <div class="popup" id="popup">
+
+        <div class="popup-box">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <h2>Booking Confirmed!</h2>
+
+            <p id="popupMessage">
+                Your service has been booked successfully.
+            </p>
+
+            <button onclick="closePopup()">
+                OK
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
